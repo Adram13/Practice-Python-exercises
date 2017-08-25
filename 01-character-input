@@ -1,0 +1,17 @@
+# Create a program that asks the user to enter their name and their age.
+# Print out a message addressed to them that tells them the year that
+# they will turn 100 years old.
+
+import datetime
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print("\n")
+print("Your name is: " + name + ", and your age is " + str(age))
+# print("Your age is: " + str(age))
+# from datetime module
+today_year = datetime.date.today().year
+today_year_as_int = int(today_year)
+print("We are on year " + str(today_year_as_int))
+age100 = today_year_as_int - age + 100
+print("You will be 100 years old in: " + str(age100))
