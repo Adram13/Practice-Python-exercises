@@ -1,0 +1,17 @@
+# Create a program that asks the user for a number and then prints out a list
+# of all the divisors of that number.
+
+a = int(input("insert a number to check divisors: "))
+b = int(round(a / 2, 0) + 1)
+list_to_check = list(range(1, b))
+if len(list_to_check) < 10:
+    print(list_to_check)
+
+divisor_list = []
+for i in list_to_check:
+    if a % i == 0:
+        divisor_list.append(i)
+divisor_list.append(a)
+print(divisor_list)
+if divisor_list == [1, a]:
+    print('it is a prime number!')
