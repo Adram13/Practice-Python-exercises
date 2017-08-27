@@ -39,8 +39,9 @@ for k in a:
     if k in b and not (k in common_elements):
         common_elements.append(i)
 
-# trying to shorten the search for common elements in only 1 line: it works, but duplicates?
+# trying to shorten the search for common elements in only 1 line: it works, but duplicates? Better use SETs
 # common_elements = list(filter(lambda i: i in a, b))
+
 
 print("the 2 lists have ", len(common_elements), " elements in common!")
 print(common_elements)
