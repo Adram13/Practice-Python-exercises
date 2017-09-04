@@ -2,8 +2,8 @@
 Ask the user for a string and print out whether this string is a palindrome
 or not. (A palindrome is a string that reads the same forwards and backwards.)
 '''
+'''
 # using regular expressions
-
 import re
 string_a = input("Write a string to check for being palindrome: ")
 print(string_a)
@@ -11,3 +11,19 @@ string_b = string_a[::-1]
 print(string_b)
 if re.match(string_a, string_b):
             print('It\'s palindrome!')
+'''
+
+#alternative way 
+string_a = input("Write a string to check for being palindrome: ")
+
+#remove spaces
+string_a = string_a.replace(" ","")
+
+string_backward = string_a[::-1]
+
+string_forward = string_a
+
+if (string_backward == string_forward):
+    print ("String is a palindrome, normal word is = %s and reverse is %s"%(string_forward, string_backward))
+else:
+    print ("String is NOT a palindrome, normal word is = %s and reverse is %s"%(string_forward, string_backward))
